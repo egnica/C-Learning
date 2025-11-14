@@ -8,7 +8,7 @@ To run it: ./variables
 
 | Part           | Meaning                                       |
 | -------------- | --------------------------------------------- |
-| `cc`           | The C compiler (Clang on macOS)               |
+| `cc`           | The C compiler (Clang on macOS)  Clang is part of the Xcode Command Line Tools package.|
 | `variables.c`  | Your source code                              |
 | `-o variables` | “Output the compiled program with this name”. |
 | `./variables`  | Run the program                               |
