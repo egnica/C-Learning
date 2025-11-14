@@ -1,6 +1,6 @@
 ## Basic Compile Command
 
-cc filename.c -o outputName
+`cc` `filename.c` `-o outputName`
 
 if your file is: variables.c
 Then compile with: cc variables.c -o variables
@@ -30,3 +30,18 @@ To run it: ./variables
 | `%X`      | Unsigned hexadecimal (uppercase)      | `unsigned int`           | `7FA`            |
 | `%p`      | Pointer address                       | any pointer type         | `0x7ffee4c3a988` |
 | `%%`      | Literal percent sign                  | _(none)_                 | `%`              |
+
+## A pointer in C is a variable that holds the memory address of another variable.
+
+int age = 43; <-- age lives somewhere in memory
+int \*p = &age <-- p stores the ADDRESS of age
+
+## Basic Math Operators
+
+| Operator | Meaning            | Example |
+| -------- | ------------------ | ------- |
+| +        | addition           | a+b     |
+| -        | subtraction        | a-b     |
+| \*       | multiplication     | a\*b    |
+| /        | division           | a/b     |
+| %        | modulus(remainder) | a%b     |
