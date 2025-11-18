@@ -45,3 +45,12 @@ int \*p = &age <-- p stores the ADDRESS of age
 | \*       | multiplication     | a\*b    |
 | /        | division           | a/b     |
 | %        | modulus(remainder) | a%b     |
+
+## Pointers
+- A pointer stores a memory address, not a value
+- &variable gives you the address of that variable
+- *pointer accesses the value at that address
+- char* strings are pointers to characters
+- Arrays “decay” into pointers when passed to functions
+
+##

@@ -1,0 +1,80 @@
+{
+  "users": [
+    {
+      "id": "user_001",
+      "name": "Alice Johnson",
+      "email": "alice@example.com",
+      "role": "admin",
+      "active": true,
+      "createdAt": "2025-01-01T14:00:00Z"
+    },
+    {
+      "id": "user_002",
+      "name": "Bob Smith",
+      "email": "bob@example.com",
+      "role": "member",
+      "active": false,
+      "createdAt": "2025-02-15T09:30:00Z"
+    },
+    {
+      "id": "user_003",
+      "name": "Charlie Davis",
+      "email": "charlie@example.com",
+      "role": "member",
+      "active": true,
+      "createdAt": "2025-03-10T18:45:00Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod_1001",
+      "name": "Wireless Keyboard",
+      "price": 49.99,
+      "inStock": true,
+      "tags": ["electronics", "accessories"],
+      "rating": 4.5
+    },
+    {
+      "id": "prod_1002",
+      "name": "Noise-Canceling Headphones",
+      "price": 129.99,
+      "inStock": false,
+      "tags": ["audio"],
+      "rating": 4.8
+    },
+    {
+      "id": "prod_1003",
+      "name": "LED Monitor 27in",
+      "price": 219.99,
+      "inStock": true,
+      "tags": ["electronics", "display"],
+      "rating": 4.4
+    }
+  ],
+  "orders": [
+    {
+      "orderId": "ord_5001",
+      "userId": "user_001",
+      "total": 99.98,
+      "items": [{ "productId": "prod_1001", "qty": 2 }],
+      "status": "processing",
+      "placedAt": "2025-03-20T10:10:00Z"
+    },
+    {
+      "orderId": "ord_5002",
+      "userId": "user_003",
+      "total": 129.99,
+      "items": [{ "productId": "prod_1002", "qty": 1 }],
+      "status": "shipped",
+      "placedAt": "2025-03-21T16:45:00Z"
+    },
+    {
+      "orderId": "ord_5003",
+      "userId": "user_002",
+      "total": 219.99,
+      "items": [{ "productId": "prod_1003", "qty": 1 }],
+      "status": "delivered",
+      "placedAt": "2025-03-18T08:20:00Z"
+    }
+  ]
+}
