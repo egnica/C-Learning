@@ -47,10 +47,33 @@ int \*p = &age <-- p stores the ADDRESS of age
 | %        | modulus(remainder) | a%b     |
 
 ## Pointers
+
 - A pointer stores a memory address, not a value
 - &variable gives you the address of that variable
-- *pointer accesses the value at that address
-- char* strings are pointers to characters
+- \*pointer accesses the value at that address
+- char\* strings are pointers to characters
 - Arrays “decay” into pointers when passed to functions
 
-##
+## 🎯 Why strings don’t need & but ints do
+
+- Strings in your struct are arrays, not pointers (even though they act like pointers).
+- Arrays automatically give their address.
+- Ints are single variables, not arrays.
+- They do NOT give their address.
+- You must add &.
+
+```
+struct Movies
+{
+    char movieName[50];
+    int yearReleased;
+    int starRating;
+};
+scanf("%49s", movieArray[count].movieName);
+scanf("%d", &movieArray[count].yearReleased);
+scanf("%d", &movieArray[count].starRating);
+
+printf("%s \n", movieArray[x].movieName);
+printf("%d \n", movieArray[x].yearReleased);
+printf("%d \n", movieArray[x].starRating);
+```
