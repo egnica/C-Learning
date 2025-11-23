@@ -54,7 +54,7 @@ int \*p = &age <-- p stores the ADDRESS of age
 - char\* strings are pointers to characters
 - Arrays “decay” into pointers when passed to functions
 
-## 🎯 Why strings don’t need & but ints do
+## 🎯 Why strings don’t need `&` but ints do
 
 - Strings in your struct are arrays, not pointers (even though they act like pointers).
 - Arrays automatically give their address.
