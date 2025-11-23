@@ -16,9 +16,17 @@ struct Contact contactArray[50];
 char searchName[50];
 void deleteRecord();
 void saveContacts();
+void loadContacts();
 
 
 int main(){
+
+    int startUp = 0;
+
+    if(startUp == 0){
+        loadContacts();
+        startUp++;
+    }
     
     
 
@@ -29,8 +37,7 @@ do{
     printf("3. Search for a contact by name \n");
     printf("4. Delete a contact by index \n");
     printf("5. Save all contacts to a file\n");
-    printf("6. Load contacts from a file on startup \n");
-    printf("7. Quit \n");
+    printf("6. Quit \n");
     printf("-> ");
     scanf("%d", &numMenuSelect);
 
@@ -66,7 +73,7 @@ do{
 
 
 
-}while(numMenuSelect != 7);
+}while(numMenuSelect != 6);
 
 
 
@@ -161,5 +168,34 @@ void saveContacts(){
     }
 
    fclose(file);
+
+}
+
+void loadContacts(){
+    FILE *file = fopen("contact.txt", "r");
+
+    if(file == NULL) {
+        printf("No contact file found");
+    }
+
+    count = 0;
+
+
+    while (count < 50) {
+
+        int readCount = fscanf(file, "%49s %19s %49s",
+                               contactArray[count].name,
+                               contactArray[count].phone,
+                               contactArray[count].email);
+
+        if (readCount != 3) {
+            break; // stop loading
+        }
+
+        count++;
+    }
+
+    fclose(file);
+    printf("Loaded %d contacts from contact.txt\n", count);
 
 }
