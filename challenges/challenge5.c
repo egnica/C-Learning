@@ -43,7 +43,7 @@ int userNumMenu;
 
     if(userNumMenu > 8 || userNumMenu < 1){
         printf("Invalid entry");
-        break;
+        continue;  
        } 
         switch (userNumMenu)
 
@@ -176,7 +176,7 @@ int findIndexRecord(){
     scanf("%d", &userIndex);
 
   
-        if (userIndex <= count){
+        if (userIndex >= 0 && userIndex < count){
             return userIndex;
         }
   
