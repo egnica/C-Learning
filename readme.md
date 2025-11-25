@@ -1,3 +1,10 @@
+## Quick Tips:
+
+- every string ends with `\0`
+- quick delete
+    - movieArray[index] = movieArray[count - 1];
+        count--;
+
 ## Basic Compile Command
 
 `cc` `filename.c` `-o outputName`
